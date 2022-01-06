@@ -1,0 +1,146 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+header{
+/*	order: 0;*/
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+	#wrap {
+		flex-flow: row wrap;
+	}
+	#boxslider ul li{
+	}
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	
+	/*--------------회원가입---------------*/
+	#register{
+		padding-top: 150px;
+		font-family: "InfinitySans-RegularA1";
+	}
+	#register h1{
+		font-size: 50px;
+		text-align: center;
+	}
+	#underline{
+		width: 700px;
+		margin-top:20px;
+		border-bottom: 4px solid #3A8B5A;
+	}
+	#register .text1{
+		padding-top:60px;
+		font-size: 25px;
+		text-align:left;
+		padding-bottom:10px;
+	}
+	/*테이블*/
+	table, th, td{
+		border: 1px solid #797979;
+		border-collapse: collapse;
+	}
+	td{
+		padding-left:20px;
+		font-size:18px;
+	}
+	.col1{
+		width: 190px; /*210*/
+		height: 50px;
+		background-color: #F2F2F2;
+	}
+	.col2{
+		width: 320px; /*490*/
+		height: 50px;
+	}
+	.col3{
+		/* width: 100px;
+		height: 50px; */
+		width: 140px;
+		height: 30px;
+		border: 1px solid  #797979;
+	}
+	.inputGroup1{
+		width:300px;
+		height: 30px;
+	}
+	#inputPassword{
+		width:300px;
+		height: 30px;
+	}
+
+	.checkID{
+		width: 140px;
+		height: 30px;
+		/* background-image: url("../images/button/CheckID.png"); */
+	}
+	#checkNick{
+		width: 80px;
+		height: 30px;
+		background-image: url("../images/button/CheckNickname.png");
+	}
+	.button{
+		margin-top: 20px;
+		font-size: 25px;
+		width: 300px;
+		height: 50px;
+		text-align: center;
+		border: 1px black solid;
+	}
+	#insert{
+		margin-top: 100px;
+		font-size: 25px;
+		width: 300px;
+		height: 50px;
+		text-align: center;
+
+	}
+	#back{
+		margin-top: 20px;
+		font-size: 25px;
+		width: 300px;
+		height: 50px;
+		text-align: center;
+		margin-bottom: 100px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

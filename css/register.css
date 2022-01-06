@@ -1,0 +1,172 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+/*--------------회원가입---------------*/
+#register {
+	width: 90%;
+	padding-top: 150px;
+	font-family: "InfinitySans-RegularA1";
+	padding-top: 150px;
+}
+
+#register h1 {
+	width: 100%;
+	font-size: 50px;
+	text-align: center;
+}
+
+#underline {
+	width: 100%;
+	margin-top: 20px;
+	border-bottom: 4px solid #3A8B5A;
+}
+
+#register .text1 {
+	padding-top: 60px;
+	font-size: 25px;
+	text-align: left;
+	padding-bottom: 10px;
+}
+/*테이블*/
+table, th, td {
+	border: 1px solid #797979;
+	border-collapse: collapse;
+}
+
+td {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 18px;
+}
+
+.col1 {
+	width: 28.571428%; /*210*/
+	height: 50px;
+	background-color: #F2F2F2;
+}
+
+.col2 {
+	width: 35.571428%; /*490*/
+	height: 50px;
+}
+
+.col3 {
+	/* width: 100px;
+		height: 50px; */
+	width: 35.857142%;
+	height: 30px;
+	border: 1px solid #797979;
+}
+
+.inputGroup1 {
+	width: 100%;
+	height: 30px;
+}
+
+.checkID {
+	width: 100%;
+	height: 30px;
+	/* background-image: url("../images/button/CheckID.png"); */
+}
+
+.checkID .checkbutton {
+	width: 100%;
+	height: 30px;
+	background-color: #3A8B5A;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+
+#checkNick {
+	width: 80px;
+	height: 30px;
+	background-image: url("../images/button/CheckNickname.png");
+}
+
+.button {
+	margin-top: 20px;
+	font-size: 25px;
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+#insert {
+	margin-top: 100px;
+	font-size: 25px;
+	width: 300px;
+	height: 50px;
+	text-align: center;
+}
+
+#back {
+	margin-top: 20px;
+	font-size: 25px;
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+/*테블릿용 CSS*/
+@media all and (min-width:768px) {
+	#register {
+		width: 64.8148148%;
+	}
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px) {
+	#register {
+		width: 64.8148148%;
+	}
+	.col1 {
+		width: 190px; /*210*/
+		height: 50px;
+		background-color: #F2F2F2;
+	}
+	.col2 {
+		width: 320px; /*490*/
+		height: 50px;
+	}
+	.col3 {
+		/* width: 100px;
+		height: 50px; */
+		width: 140px;
+		height: 30px;
+		border: 1px solid #797979;
+	}
+	.inputGroup1 {
+		width: 300px;
+		height: 30px;
+	}
+	#inputPassword {
+		width: 300px;
+		height: 30px;
+	}
+	.checkID {
+		width: 140px;
+		height: 30px;
+		/* background-image: url("../images/button/CheckID.png"); */
+	}
+	#checkNick {
+		width: 80px;
+		height: 30px;
+		background-image: url("../images/button/CheckNickname.png");
+	}
+	.checkID .checkbutton {
+		width: 100%;
+		height: 30px;
+		background-color: #3A8B5A;
+		color: white;
+		font-size: 14px;
+		text-align: center;
+		line-height: 30px;
+	}
+}

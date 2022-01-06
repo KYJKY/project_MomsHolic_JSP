@@ -1,0 +1,266 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+header{
+/*	order: 0;*/
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+	#wrap {
+		flex-flow: row wrap;
+	}
+
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+    }
+    /* 공통 */
+    #subKeyimage img ,#summary img, #process img{ /* 이미지 반응형*/
+        width: 100%;
+        height: auto;
+    }
+    section, #manuTab{
+        width: 84.375%;
+		height: auto;
+		
+    }
+	/* 서브 키이미지, 사이트 경로 */
+    #subKeyimage{
+		width: 84.375%;
+		/* padding-top: 178px; */
+		/* background-image: url("../images/subpage/donate/donate_subimage.jpg");
+		background-repeat: no-repeat center;
+		background:cover; */
+	}
+    #subKeyimage h1,#subKeyimage h2, #subKeyimage h3{ 
+        position: relative;
+        color: white;
+		font-family: 'Jal_Haru';
+    }
+    #subKeyimage h1{ /*MOM's 나눔터*/
+        top: -180px;
+        text-align: center;
+    }
+    #subKeyimage h2{ /*이웃에게 사랑을 나눠주세요*/
+        top: -150px;
+        text-align: center;
+    }
+    #subKeyimage h3{ /*메인 > MOM's 나눔터 > 물품 기부하기*/
+        top: -90px;
+        left: 10px;
+        font-size: 12px;
+        text-align: left;
+	}
+	
+	/*칼럼탑라인, 정렬순서*/
+	#topList{
+		width: 100%;
+		height: 60px;
+		margin-top: -75px;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		font-family: 'InfinitySans-RegularA1';
+		border-bottom:3px solid #3A8B5A ;
+	}
+	#topList > h1{
+		width: 50%;
+		height: 60px;
+		line-height: 60px;
+		font-size: 20px;
+		margin: 0;
+	}
+	#topList > form{
+		width: 50%;
+		height: 60px;
+		line-height: 60px;
+		font-size: 20px;
+		margin: 0;
+		text-align: right;
+	}
+	#topList select{
+		width: 100px;
+		height: 25px;
+	}
+
+	/* 칼럼 */
+	#columnGroup{
+		width: 91.203%;
+		height: auto;
+	}
+	.columnCard{
+		width: 100%;
+		/* height: 180px; 이걸 쓰면 180으로 적용이 안되고 안써야 적용이 됨 (?) */
+		padding:20px 0;
+		display: flex;
+		flex-flow: row wrap;
+
+		border-top: 1px solid #797979;
+	}
+	.columnCard:first-child{
+		border: 0;
+	}
+	.columnCard img{
+		width: 230px;
+		height: 140px;
+	}
+	.columnInfo{
+		margin-left: 7.61421%;
+		width: 68.02%;
+		font-family: 'InfinitySans-RegularA1';
+	}
+	.columnInfo .title{
+		width: 100%;
+		height: 26px;
+		margin-top: 20px;
+		font-size: 18px;
+		color: #03BF16;
+		overflow: hidden;
+	}
+	.columnInfo .preview{
+		width: 100%;
+		height: 44px;
+		margin: 10px 0;
+		color: #333333;
+		overflow: hidden;
+		font-size: 16px;
+	}
+	.columnSubinfo{
+		width: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.columnSubinfo .name_date{
+		width: 50%;
+		font-size: 14px;
+		color: #7f7f7f;
+	}
+	.columnSubinfo .hits_like{
+		width: 50%;
+		font-size: 14px;
+		color: #7f7f7f;
+		text-align: right;
+	}
+	.hits_like .hits{color: #F59A23;}
+	.hits_like .like{color: #EC808D;}
+
+
+    
+    /*-------------------페이징 영역--------------*/
+	.paging { text-align: center; font-size: 0; margin-top: 20px;}
+	.paging li { display:inline-block; vertical-align: middle;}
+	.paging li a { font-size: 14px; display: block; width: 32px; height: 32px; line-height: 32px; color: #898786;}
+	.paging li.on a,
+	.paging li a:hover { color: #3A8B5A; text-decoration: underline;}
+	.paging li.first a,
+	.paging li.prev a,
+	.paging li.next a,
+	.paging li.last a { overflow: hidden; margin: 0 2px; width: 30px; height: 30px; border:1px solid #ebeae9; color: transparent; background: no-repeat center; }
+	.paging li.first a { background-image:url(../images/icon/ico_paging_first.png);}
+	.paging li.prev a { background-image:url(../images/icon/ico_paging_prev.png);}
+	.paging li.next a { background-image:url(../images/icon/ico_paging_next.png);}
+	.paging li.last a { background-image:url(../images/icon/ico_paging_last.png);}
+	.paging li.prev a { margin-right:23px;}
+	.paging li.next a { margin-left:23px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 상품카드 가변 정렬, 최대 넓이일 때=카드 한 줄에 4개 */
+@media all and (min-width:1420px){
+	.content_item{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.productCard{ /*상품카드 */
+		width: 248px;
+	/*	width: 22.962962%;*/
+		height: 285px;
+		margin: 40px 0 0 0;
+	}
+	.content_item .productCard img{ /*이미지 248px 고정*/
+		width: 248px;
+		border: 0;
+	}
+	/* 최대 넓이일 때는 보이게 함 */
+	.lastCard{
+		display: block;
+	}
+	/* ----------------------컨텐츠3---------------- */
+	
+	.donateCard{ /*기부카드 */
+		width: 340px;
+		height: 450px;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+	.donateCard img{
+		margin-top: -50px;
+		width: 340px;
+		height: auto;
+	}
+	/* 기부정보 부모요소 */
+	.donateInfo{ 
+		height: 110px;
+		margin-top: -4px;
+		border-left: 1px solid #D7D7D7;
+		border-right: 1px solid #D7D7D7;
+		border-bottom: 1px solid #D7D7D7;
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: row;
+	}
+
+	.donateInfo .enterButton{
+		width: 110px;
+		height: 50px;
+		color: white;
+		border-radius: 5px;
+		border: 0;
+		background-color: #03BF16;
+		
+		font-size: 20px;
+		font-family: 'GmarketSansBold';
+		line-height: 50px;
+		text-align: center;
+		margin-top: 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

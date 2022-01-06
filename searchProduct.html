@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>MOM's Holic</title>
+		<link href="css/searchProduct.css" rel="stylesheet" type="text/css">
+		<link href="css/base.css" rel="stylesheet" type="text/css">
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<link href="css/footer.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			function order(){//정렬 순서에 따라 링크 이동
+				var order=document.orderForm.orderSelect.options[orderForm.orderSelect.selectedIndex].value;
+				var orderlink;
+				if(order=="new")
+					orderlink="www.naver.com"; //최신순 링크
+				if(order=="hits")
+					orderlink="";	//조회수순 링크
+				if(order=="lowprice")
+					orderlink="";	//저가순 링크
+				if(order=='highprice')
+					orderlink="";	//고가순 링크
+				window.location.href=orderlink;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!--헤더-->
+			<header id="header">
+				<!--윗 네비게이션-->
+				<div id="topNav">
+					<ul>
+						<li id="logo"><a href="index.html"><img src="images/Logo.png"></a></li>
+						<li>
+							<form>
+								<input type="text" id="searchText" placeholder="검색어를 입력해 주세요.">
+								<div id="searchButton"><a href="#"><img src="images/button/search.png"></a></div>
+							</form>
+						</li>
+						<li id="log_register_customer">
+							<a href="login.html">로그인</a>&nbsp;&nbsp;|&nbsp;
+							<a href="register.html">회원가입</a>&nbsp;&nbsp;|&nbsp;
+							<a href="#">고객센터</a>
+						</li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+				
+				<!--아래 네비게이션-->
+				<div id="bottomNav">
+					<ul id="mainmenu">
+						<li id="mainlist1"><a href="#">
+								<img src="images/categorySymbol.PNG" id="category1">
+								<p id="category2">MOM's 마켓</p>
+								<img src="images/categorySymbol2.png" id="category3">
+							</a>
+							<ul id="submenu">
+								<li><a href="#"><img src="images/icon/shopping-cart.png"><p>전체</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-clothing.png"><p>의류</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-shoes.png"><p>신발</p></a></li>
+								<li><a href="#"><img src="images/icon/book.png"><p>도서</p></a></li>
+								<li><a href="#"><img src="images/icon/rubber-duck.png"><p>장난감/완구</p></a></li>
+								<li><a href="#"><img src="images/icon/menu.png"><p>기타</p></a></li>
+							</ul>
+						</li>		
+						<li id="mainlist2"><a href="#">MOM's 나눔터</a></li>
+						<li id="mainlist3"><a href="#">MOM's 칼럼</a></li>
+						<li id="mainlist4"><a href="#">MOM's 레시피</a></li>
+						<li id="mainlist5"><a href="#">MOM's 일기</a></li>
+						<li id="mainlist6"><a href="#">
+								 물건 판매하기
+						</a></li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+			</header>
+			
+			<!---------------카테고리---------------->
+			<section id="category">
+				<div id="categoryInfo">
+					<div id="webnav"><p>메인 > 상품검색 > " "</p></div>
+					<div id="categoryName">" "의 검색결과</div>
+					<div id="categoryOrder">
+						<form action="#" name="orderForm">
+							<select name="orderSelect" onchange="order()">
+								<option value="new" selected="selected">최신순</option>
+								<option value="hits">조회순</option>
+								<option value="lowprice">저가순</option>
+								<option value="highprice">고가순</option>
+							</select>
+						</form>
+					</div>
+				</div>
+				
+				<div id="productGroup">
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+					<!--상품카드1-->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+			</section>
+			
+			<!-----------------페이징 영역----------------->
+			<div id="paging">
+				<ol class="paging">
+					<li class="first"><a href="#a">첫페이지</a></li>
+					<li class="prev"><a href="#a">이전페이지</a></li>
+					<li class="on"><a href="#a">1</a></li>
+					<li><a href="#a">2</a></li>
+					<li><a href="#a">3</a></li>
+					<li class="next"><a href="#a">다음페이지</a></li>
+					<li class="last"><a href="#a">마지막페이지</a></li>
+				</ol>
+			</div>
+			
+			<!-----------------푸터영역----------------->
+			<footer>
+				<div id="footerimg">
+					<img src="images/logo.png" id="footerLogo">
+					<img src="images/sns.png" id="footerSNS">
+				</div>
+				<div id="footerInfo">
+					<p>
+						(주)맘스홀릭 대표이사: 이마마 | 주소: 서울특별시 강남구 강남	대로 234길 맘스타워 8층<br>
+						사업자등록번호 : 100-01-54123     통신판매업신고번호 : 제2021-서울강남-0520호 사업자정보확인<br>
+						맘스홀릭 고객센터 문의 : 02-550-9988(평일 10시~16시) | 팩스 : 02-560-5050<br>
+						호스팅서비스 제공자: MOMS Web Services (MWS)<br><br><br>
+					</p>
+					<p>
+						(주)맘스홀릭은 통신판매중개자로서 거래당사자가 아니며,  맘스홀릭 판매자가 등록한 상품정보 및 거래에 대해 (주)맘스홀릭은 책임이 없습니다.<br>
+						(주)맘스홀릭. All rights reserved.
+					</p>
+				</div>
+			</footer>
+		</div>
+			
+			
+			
+			
+			
+	</body>
+</html>

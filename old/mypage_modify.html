@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>MOM's Holic</title>
+		<link href="css/mypage_modify.css" rel="stylesheet" type="text/css">
+		<link href="css/base.css" rel="stylesheet" type="text/css">
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<link href="css/footer.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        
+    </head>
+
+	<body>
+		<div id="wrap">
+			<!--헤더-->
+			<header id="header">
+				<!--윗 네비게이션-->
+				<div id="topNav">
+					<ul>
+						<li id="logo"><a href="index.html"><img src="images/Logo.png"></a></li>
+						<li>
+							<form>
+								<input type="text" id="searchText" placeholder="검색어를 입력해 주세요.">
+								<div id="searchButton"><a href="#"><img src="images/button/search.png"></a></div>
+							</form>
+						</li>
+						<li id="log_register_customer">
+							<a href="login.html">로그인</a>&nbsp;&nbsp;|&nbsp;
+							<a href="register.html">회원가입</a>&nbsp;&nbsp;|&nbsp;
+							<a href="#">고객센터</a>
+						</li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+				
+				<!--아래 네비게이션-->
+				<div id="bottomNav">
+					<ul id="mainmenu">
+						<li id="mainlist1"><a href="#">
+								<img src="images/categorySymbol.PNG" id="category1">
+								<p id="category2">MOM's 마켓</p>
+								<img src="images/categorySymbol2.png" id="category3">
+							</a>
+							<ul id="submenu">
+								<li><a href="#"><img src="images/icon/shopping-cart.png"><p>전체</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-clothing.png"><p>의류</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-shoes.png"><p>신발</p></a></li>
+								<li><a href="#"><img src="images/icon/book.png"><p>도서</p></a></li>
+								<li><a href="#"><img src="images/icon/rubber-duck.png"><p>장난감/완구</p></a></li>
+								<li><a href="#"><img src="images/icon/menu.png"><p>기타</p></a></li>
+							</ul>
+						</li>		
+						<li id="mainlist2"><a href="#">MOM's 나눔터</a></li>
+						<li id="mainlist3"><a href="#">MOM's 칼럼</a></li>
+						<li id="mainlist4"><a href="#">MOM's 레시피</a></li>
+						<li id="mainlist5"><a href="#">MOM's 일기</a></li>
+						<li id="mainlist6"><a href="#">
+								 물건 판매하기
+						</a></li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+			</header>
+			<div id="webnav">
+				<p>메인 > 마이페이지 > 프로필수정</p>
+			</div>
+			<!--판매하기  -->
+			<section>
+                <div id="input">
+                    <form name="" method="post" action="">
+                    <div id="modifyTop">
+                        <p>회원 프로필 수정</p>
+                    </div>
+                    <div id="modifyBorder">
+                        <table id="table2">
+                            <tr>
+                                <td class="col1">이름</td>
+                                <td class="col3" colspan="2">
+                                    <input type="text" name="Name" class="inputGroup1">
+                                    <!-- <a href="javascript:checkID()">
+                                        <div class="checkID"></div>
+                                    </a> -->
+                                </td>
+                                <!-- <td class="col3" style="border-left: 0;"></td> -->
+                                <!--  <a href="javascript:checkID()"><div id="checkID"></div></a></td>
+                                -->
+                            </tr>
+                            <tr>
+                                <td class="col1">생년월일</td>
+                                <td class="col3 " colspan="2"><input type="date" name="birth" class="inputGroup1" placeholder="8~16자 영문, 숫자, 특수문자" size="21"></td>
+                            </tr>
+                            <tr>
+                                <td class="col1">핸드폰</td>
+                                <td class="col3" colspan="2"><input type="text" class="inputGroup1" name="Phone" placeholder=" ' - ' 제외하고 공백없이 입력" maxlength="11"></td>
+                            </tr>
+                            <tr>
+                                <td class="col1">이메일</td>
+                                <td class="col3" colspan="2">
+                                <input type="text" name="Email1" class="inputGroup1" placeholder="example" size="21" style="width:137px">&nbsp;@
+                                <input type="text" name="Email2" class="inputGroup1" placeholder="gmail.com" size="21" style="width:137px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col1">우편번호</td>
+                                <td class="col2"><input type="text" name="addressCode" class="inputGroup1" id="addressCode" placeholder="우편번호" size="5" style="width:140px" disabled="disabled"></td>
+                                <td class="col3">
+                                        <div class="checkID" id="checkCode"><img onclick="addressSearch()" src="images/button/searchZipcode.png" class="btnStyle"></div>
+                            </tr>
+                            <tr>
+                                <td class="col1">기본주소</td>
+                                <td class="col3" colspan="2"><input type="text" name="address1" id="address1" class="inputGroup1" placeholder="주소" size="21" disabled="disabled"></td>
+                            </tr>
+                            <tr>
+                                <td class="col1">상세주소</td>
+                                <td class="col3" colspan="2"><input type="text" name="address2" id="address2" class="inputGroup1" placeholder="상세주소" size="21"></td>
+                            </tr>
+                            <tr>
+                                <td class="col1">인삿말</td>
+                                <td class="col4" colspan="2"><textarea placeholder="인삿말 작성"></textarea></td>
+                            </tr>
+                            
+                        </table>
+                    
+                        <div id="button">
+                            <a href="#" id="modifyButton">수정하기</a>
+                            <a href="#" id="backButton">돌아가기</a>
+                        </div>
+
+                    </div>
+                        
+                    </form>
+                </div>			
+			</section>
+			
+			
+			<!--푸터영역-->
+			<footer>
+				<div id="footerimg">
+					<img src="images/logo.png" id="footerLogo">
+					<img src="images/sns.png" id="footerSNS">
+				</div>
+				<div id="footerInfo">
+					<p>
+						(주)맘스홀릭 대표이사: 이마마 | 주소: 서울특별시 강남구 강남	대로 234길 맘스타워 8층<br>
+						사업자등록번호 : 100-01-54123     통신판매업신고번호 : 제2021-서울강남-0520호 사업자정보확인<br>
+						맘스홀릭 고객센터 문의 : 02-550-9988(평일 10시~16시) | 팩스 : 02-560-5050<br>
+						호스팅서비스 제공자: MOMS Web Services (MWS)<br><br><br>
+					</p>
+					<p>
+						(주)맘스홀릭은 통신판매중개자로서 거래당사자가 아니며,  맘스홀릭 판매자가 등록한 상품정보 및 거래에 대해 (주)맘스홀릭은 책임이 없습니다.<br>
+						(주)맘스홀릭. All rights reserved.
+					</p>
+				</div>
+			</footer>
+		</div>
+			
+			
+			
+			
+			
+	</body>
+</html>

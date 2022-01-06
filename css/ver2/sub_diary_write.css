@@ -1,0 +1,122 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+header{
+/*	order: 0;*/
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+	#wrap {
+		flex-flow: row wrap;
+	}
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	#webnav{
+		width: 84.375%;
+		margin-top: 37px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-family: 'InfinitySans-RegularA1';
+		line-height: 14px;
+	}
+	section{
+		width: 84.375%;
+		height: auto;
+		font-family: 'InfinitySans-RegularA1';
+	}
+	#selltop{
+		width: 100%;
+		height: 65px;
+		border: 1px #d7d7d7 solid;
+		text-align: center;
+		font-size: 25px;
+		line-height: 65px;
+	}
+	#sellInfo{
+		padding-top: 50px;
+		width: 100%;
+		height: 800px;
+		border-left: 1px #d7d7d7 solid;
+		border-bottom: 1px #d7d7d7 solid;
+		border-right: 1px #d7d7d7 solid;
+		display: flex;
+		flex-flow: column;
+	}
+	.row{
+		width: 100%;
+		height: 100px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	.row p{
+		width: 30%;
+		text-align: center;
+		font-size: 20px;
+	}
+	.row div{
+		width: 70%;
+	}
+	.row div input{
+		width: 80%;
+		height: 30px;
+	}
+	.row div textarea{
+		width: 80%;
+		height: 400px;
+	}
+
+	label{
+		margin-right: 15%;
+	}
+
+	#sellButton{
+		width: 100%;
+		margin-top: 400px;
+		text-align: center;
+	}
+	#sellButton img{
+		margin: 0 2%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

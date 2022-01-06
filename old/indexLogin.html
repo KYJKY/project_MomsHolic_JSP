@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>MOM's Holic</title>
+		<link href="css/index.css" rel="stylesheet" type="text/css">
+		<link href="css/base.css" rel="stylesheet" type="text/css">
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<link href="css/footer.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/jquery.bxslider.min.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/jquery.bxslider.min.js"></script>	
+		<script> //박스 슬라이더 
+			$(document).ready(function(){
+				$('.slider').bxSlider({
+					auto:true, //자동
+					speed:500, //속도
+					pause:5000, //멈추는시간
+					mode:'horizontal', //가로
+					autoControls:false, 
+					pager:true,
+					caption:true,
+				});
+			});
+
+			//팝업 
+			// $(document).ready(function(){
+			// 	$(".open").on('click',function(){
+			// 		$(".popup").show();
+			// 		$(".dim").show();
+			// 	});
+			// 	$(".popup .close").on('click',function(){
+			// 		$(this).parent().hide();
+			// 		$(".dim").hide();
+			// 	});
+			// });
+
+			//응모 남은시간
+			var remain = 3600; //응모 남은시간(초) 나중에 jsp로 받아와서 넣기
+			var hour= ""; //시
+			var min = ""; //분
+			var sec = ""; //초
+
+			//setInterval(함수, 시간) : 주기적인 실행
+			var x = setInterval(function() {
+				//parseInt() : 정수를 반환
+				min = parseInt(remain/60)%60;//분
+				sec = remain%60; //초
+				hour = parseInt(remain/60/60); //시간 
+
+				document.getElementById("remainTime").innerHTML =hour + "시간 " + min + "분 " + sec + "초";
+				remain--;
+
+				//타임아웃 시
+				if (remain < 0) {
+					clearInterval(x); //setInterval() 실행을 끝냄
+					document.getElementById("remainTime").innerHTML = "응모가 종료되었습니다.";
+				}
+			}, 1000);
+		</script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!--헤더-->
+			<header id="header">
+				<!--윗 네비게이션-->
+				<div id="topNav">
+					<ul>
+						<li id="logo"><a href="index.html"><img src="images/Logo.png"></a></li>
+						<li>
+							<form>
+								<input type="text" id="searchText" placeholder="검색어를 입력해 주세요.">
+								<div id="searchButton"><a href="#"><img src="images/button/search.png"></a></div>
+							</form>
+						</li>
+						<li id="log_register_customer">
+							<div id="loginBar">
+								<a href="#">로그아웃</a>&nbsp;&nbsp;|&nbsp;
+								<a href="#">마이페이지</a>&nbsp;&nbsp;|&nbsp;
+								<a href="#">고객센터</a>
+							</div>
+							<div id="profileBar">
+								<p>멀티미디어님</p>
+								<div id="messengerIcon"><a href="#"><img src="images/icon/messenger.png"><p>맘스톡</p></a></div>
+								<div id="bellIcon"><a href="#"><img src="images/icon/bell.png"><p>알림</p></a></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+				
+				<!--아래 네비게이션-->
+				<div id="bottomNav">
+					<ul id="mainmenu">
+						<li id="mainlist1"><a href="#">
+								<img src="images/categorySymbol.PNG" id="category1">
+								<p id="category2">MOM's 마켓</p>
+								<img src="images/categorySymbol2.png" id="category3">
+							</a>
+							<ul id="submenu">
+								<li><a href="#"><img src="images/icon/shopping-cart.png"><p>전체</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-clothing.png"><p>의류</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-shoes.png"><p>신발</p></a></li>
+								<li><a href="#"><img src="images/icon/book.png"><p>도서</p></a></li>
+								<li><a href="#"><img src="images/icon/rubber-duck.png"><p>장난감/완구</p></a></li>
+								<li><a href="#"><img src="images/icon/menu.png"><p>기타</p></a></li>
+							</ul>
+						</li>		
+						<li id="mainlist2"><a href="#">MOM's 나눔터</a></li>
+						<li id="mainlist3"><a href="#">MOM's 칼럼</a></li>
+						<li id="mainlist4"><a href="#">MOM's 레시피</a></li>
+						<li id="mainlist5"><a href="#">MOM's 일기</a></li>
+						<li id="mainlist6"><a href="#">
+								 물건 판매하기
+						</a></li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+			</header>
+			<!--박스 슬라이드-->
+			<section id="boxslider" >
+				<ul class="slider">
+					<li><a href="#"><img src="images/keyimage.jpg"></a></li>
+					<li><a href="#"><img src="images/keyimage.jpg"></a></li>
+				</ul>
+			</section>
+			
+			<!--컨텐츠1(많은 엄마들이 보고있는 물품)-->
+			<section id="content1" class="content">
+				<div class="content_title">
+					<p>많은 엄마들이 보고 있는 물품이에요!</p>
+					<a href="#" class="content_more">더보기</a>
+				</div>
+				<!--상품카드 부모div-->
+				<div class="content_item">
+					<!-- 카드1 -->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드2 -->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드3 -->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드4 -->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">가나다라마바가나다라마바가나다라마바가나다라마바</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드5 -->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드6 -->
+					<div class="productCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드7 -->
+					<div class="productCard lastCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+					<!-- 카드8 -->
+					<div class="productCard lastCard">
+						<div id="imgmom">
+							<a href="#"><img src="images/product/1.jpg"></a>
+						</div>
+						<div class="productInfo">
+							<div style="display: flex">
+								<a href="#">카드셋1</a>
+								<h2>조회수 100</h2>
+							</div>
+							<div style="display: flex">
+								<h3>1500원</h3>
+								<h4>06/12 00:00</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+			
+			<!--컨텐츠2 (기부 독려 이미지)			-->
+			<section id="content2" class="content">
+				<img src="images/keyimage2.jpg">
+			</section>
+			
+			<!--컨텐츠3 (이번 주 기부물품)			-->
+			<section id="content3" class="content">
+				<div class="content_title">
+					<p>이번 주 기부물품에 응모하세요!</p>
+					<a href="#" class="content_more">더보기</a>
+				</div>
+				<div class="content_item">
+					<div class="donateCard">
+						<div class="timeDiv"><p id="remainTime"></p></div>
+						<a href="#"><img src="images/product/ex2.png"></a>
+						<div class="donateInfo">
+							<div >
+								<h1>뉴나 레블 플러스 회전형</h1>
+								<h2>기부물품 할인가</h2>
+								<h3>21,000원</h3>
+							</div>
+							<a href="#" class="open"><div class="enterButton">
+								응모하기
+							</div></a>
+						</div>
+						<div class="remainTime">
+							
+						</div>
+					</div>
+					<div class="donateCard">
+						<div class="timeDiv"><p class="remainTime">21:19:09</p></div>
+						<a href="#"><img src="images/product/ex2.png"></a>
+						<div class="donateInfo">
+							<div >
+								<h1>뉴나 레블 플러스 회전형</h1>
+								<h2>기부물품 할인가</h2>
+								<h3>21,000원</h3>
+							</div>
+							<a href="#"><div class="enterButton">
+								응모하기
+							</div></a>
+						</div>
+					</div>
+					<div class="donateCard">
+						<div class="timeDiv"><p class="remainTime">21:19:09</p></div>
+						<a href="#"><img src="images/product/ex2.png"></a>
+						<div class="donateInfo">
+							<div >
+								<h1>뉴나 레블 플러스 회전형</h1>
+								<h2>기부물품 할인가</h2>
+								<h3>21,000원</h3>
+							</div>
+							<a href="#"><div class="enterButton">
+								응모하기
+							</div></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!--컨텐츠4 (많은 엄마들이 읽은 육아칼럼)			-->
+			<section id="content4" class="content">
+				<div class="content_title">
+					<p>많은 엄마들이 읽은 육아칼럼</p>
+					<a href="#" class="content_more">더보기</a>
+				</div>
+				<div class="columnList">
+					<div class="column">
+						<a href="#"><img src="images/column/column1.png"></a>
+						<div class="columnText">
+							<a href="#"><h1>우리 아이가 친구들과 잘 어울리게 하려면</h1></a>
+							<a href="#"><h2>[연재] 일 가정 양립을 꿈꾸는 워킹대디의 육아칼럼토요일 오전에 업무가 있어서 출근했다가 오후 4시쯤 퇴근해 조용히 책이나 읽으려고 했더니 집에 오자마자 "우리 놀이터가서 놀자" 타령하는 나은공주. 딸래..</h2></a>
+							<span>
+								<h3>테마칼럼 | 칼럼니스트 권성욱 | 2017-10-09 08:52</h3>
+								<h4>조회수 <b style="color:#F59A23; ">1234</b>  |  좋아요 <b style="color:#EC808D ">1234</b></h4>
+							</span>
+						</div>
+					</div>
+					<div class="columnLine"></div>
+					<div class="column">
+						<a href="#"><img src="images/column/column1.png"></a>
+						<div class="columnText">
+							<a href="#"><h1>우리 아이가 친구들과 잘 어울리게 하려면</h1></a>
+							<a href="#"><h2>[연재] 일 가정 양립을 꿈꾸는 워킹대디의 육아칼럼토요일 오전에 업무가 있어서 출근했다가 오후 4시쯤 퇴근해 조용히 책이나 읽으려고 했더니 집에 오자마자 "우리 놀이터가서 놀자" 타령하는 나은공주. 딸래..</h2></a>
+							<span>
+								<h3>테마칼럼 | 칼럼니스트 권성욱 | 2017-10-09 08:52</h3>
+								<h4>조회수 <b style="color:#F59A23; ">1234</b>  |  좋아요 <b style="color:#EC808D ">1234</b></h4>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!--컨텐츠5 (n월 제철 음식 레시피)			-->
+			<section id="content5" class="content">
+				<div class="content_title">
+					<p>4월 제철 음식 레시피!</p>
+					<a href="#" class="content_more">더보기</a>
+				</div>
+				<div class="recipeList">
+					<div class="recipe">
+						<a href="#"><img src="images/recipe/recipe1.png"></a>
+						<a href="#"><h1>초기 이유식 2단계 상큼하고 부드러운 배 퓨레로</h1></a>
+						<span><h2>좋아요 <b style="color: #EC808D;">10</b>&nbsp;|&nbsp;조회수 <b style="color: #F59A23;">323</b></h2></span>
+					</div>
+					<div class="recipe">
+						<a href="#"><img src="images/recipe/recipe1.png"></a>
+						<a href="#"><h1>초기 이유식 2단계 상큼하고 부드러운 배 퓨레로</h1></a>
+						<span><h2>좋아요 <b style="color: #EC808D;">10</b>&nbsp;|&nbsp;조회수 <b style="color: #F59A23;">323</b></h2></span>
+					</div>
+					<div class="recipe">
+						<a href="#"><img src="images/recipe/recipe1.png"></a>
+						<a href="#"><h1>초기 이유식 2단계 상큼하고 부드러운 배 퓨레로</h1></a>
+						<span><h2>좋아요 <b style="color: #EC808D;">10</b>&nbsp;|&nbsp;조회수 <b style="color: #F59A23;">323</b></h2></span>
+					</div>
+					<div class="recipe">
+						<a href="#"><img src="images/recipe/recipe1.png"></a>
+						<a href="#"><h1>초기 이유식 2단계 상큼하고 부드러운 배 퓨레로</h1></a>
+						<span><h2>좋아요 <b style="color: #EC808D;">10</b>&nbsp;|&nbsp;조회수 <b style="color: #F59A23;">323</b></h2></span>
+					</div>
+					<div class="recipe lastCard">
+						<a href="#"><img src="images/recipe/recipe1.png"></a>
+						<a href="#"><h1>초기 이유식 2단계 상큼하고 부드러운 배 퓨레로</h1></a>
+						<span><h2>좋아요 <b style="color: #EC808D;">10</b>&nbsp;|&nbsp;조회수 <b style="color: #F59A23;">323</b></h2></span>
+					</div>
+				</div>
+			</section>
+			
+			<!--컨텐츠6 (맘스 육아일기)-->
+			<section id="content6" class="content">
+				<div class="content_title">
+					<p>맘스 육아일기</p>
+					<a href="#" class="content_more">더보기</a>
+				</div>
+				<div class="diaryList">
+					<div class="diaryRow">
+						<div class="diary">
+							<a href="#"><img src="images/diary/tempbox.png"></a>
+							<div class="diaryInfo">
+								<a href="#"><h1>오늘 아이가 아파서 응급실 다녀왔네요 인생은 너무나도 어렵고 힘든 것이네요 </h1></a>
+								<h2>영희맘</h2>
+								<h3>2020-03-10</h3>
+							</div>
+						</div>
+					  	<div class="diary">
+							<a href="#"><img src="images/diary/tempbox.png"></a>
+							<div class="diaryInfo">
+								<a href="#"><h1>오늘 아이가 아파서 응급실 다녀왔네요 ㅠ</h1></a>
+								<h2>영희맘</h2>
+								<h3>2020-03-10</h3>
+							</div>
+						</div>
+					</div>
+					<div class="diaryRow" style="margin-bottom: 20px;">
+						<div class="diary">
+							<a href="#"><img src="images/diary/tempbox.png"></a>
+							<div class="diaryInfo">
+								<a href="#"><h1>오늘 아이가 아파서 응급실 다녀왔네요 ㅠ</h1></a>
+								<h2>영희맘</h2>
+								<h3>2020-03-10</h3>
+							</div>
+						</div>
+					  	<div class="diary">
+							<a href="#"><img src="images/diary/tempbox.png"></a>
+							<div class="diaryInfo">
+								<a href="#"><h1>오늘 아이가 아파서 응급실 다녀왔네요 ㅠ</h1></a>
+								<h2>영희맘</h2>
+								<h3>2020-03-10</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!--푸터영역-->
+			<footer>
+				<div id="footerimg">
+					<img src="images/logo.png" id="footerLogo">
+					<img src="images/sns.png" id="footerSNS">
+				</div>
+				<div id="footerInfo">
+					<p>
+						(주)맘스홀릭 대표이사: 이마마 | 주소: 서울특별시 강남구 강남	대로 234길 맘스타워 8층<br>
+						사업자등록번호 : 100-01-54123     통신판매업신고번호 : 제2021-서울강남-0520호 사업자정보확인<br>
+						맘스홀릭 고객센터 문의 : 02-550-9988(평일 10시~16시) | 팩스 : 02-560-5050<br>
+						호스팅서비스 제공자: MOMS Web Services (MWS)<br><br><br>
+					</p>
+					<p>
+						(주)맘스홀릭은 통신판매중개자로서 거래당사자가 아니며,  맘스홀릭 판매자가 등록한 상품정보 및 거래에 대해 (주)맘스홀릭은 책임이 없습니다.<br>
+						(주)맘스홀릭. All rights reserved.
+					</p>
+				</div>
+			</footer>
+
+
+			<!----------------------------------팝업---------------------------------- -->
+			<div class="popup">
+				<h2>간편 상담 신청</h2>
+				<div class="con">
+					<table class="type1">
+					<caption>
+						<details class="hide">
+							<summary>기부 상품 응모</summary>
+							<div>신청자이름, 연락처, 메모, 적용가능한혜택을 입력 또는 선택하는 표</div>
+						</details>
+					</caption>
+					<colgroup>
+					<col style="width: 111px">
+					<col>
+					</colgroup>
+					<tbody>
+					<tr>
+						<th><label for="txt1">신청자이름</label><span>*<em class="hide">필수입력</em></span></th>
+						<td><input type="text" id="txt1" placeholder="이름을 입력해 주세요."></td>
+					</tr>
+					<tr>
+						<th><label for="txt2">연락처</label><span>*<em class="hide">필수입력</em></span></th>
+						<td><input type="tel" id="txt2" placeholder="숫자만 입력해주세요."></td>
+					</tr>
+					<tr>
+						<th><label for="txt3">메모</label><em>(0/300 byte)</em></th>
+						<td><textarea id="txt3" placeholder="궁금하신 점이나 렌탈 계약 진행 시 SK매직이 고민해야 할 부분이 있다면 메모로 남겨 주세요. 예) 평일 오후 2시~3시 사이에 연락주세요."></textarea></td>
+					</tr>
+			
+					</tbody>
+					</table>
+				</div>
+				<div class="txt_center">
+					<a href="#a" class="btn_type1">응모하기</a>
+				</div>
+				<a href="#a" class="close">닫기</a>
+			</div>
+		</div>
+			
+			
+			
+			
+			
+	</body>
+</html>

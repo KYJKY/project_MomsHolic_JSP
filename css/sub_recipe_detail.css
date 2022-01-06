@@ -1,0 +1,109 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	#webnav{
+		width: 84.375%;
+		margin-top: 37px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-family: 'Jal_Haru';
+		line-height: 14px;
+	}
+	section{
+		width: 84.375%;
+		height: auto;
+		font-family: 'InfinitySans-RegularA1';
+	}
+
+	/* -----------------------레시피------------------------ */
+	#recipe{
+		margin-top: 50px;
+		height: auto;
+		font-family: 'NanumBarunGothic';
+	}
+	.recipeInfo{
+		width: 100%;
+		height: 90px;
+	}
+	.recipeInfo .title{
+		width: 100%;
+		height: auto;
+		font-size: 26px;
+	}
+	.recipeInfo .ingredient{
+		width: 100%;
+		margin: 20px 0;
+	}
+	/* 본문 */
+	.recipeBody{
+		border-top: 1px solid #797979 ;
+		padding: 30px 0;
+	}
+	.explain{
+		width: 100%;
+		padding-bottom: 100px;
+	}
+	.explain p{
+		padding: 15px 0;
+		font-size: 20px;
+		line-height: 170%;
+	}
+	.explain img{
+		width: 500px;
+		height: auto;
+		text-align: center;
+	}
+
+	/* 버튼 */
+	.likeButtonDiv{
+		width: 100%;
+		margin: 45px 0;
+	}
+	.likeButtonDiv .likeButton{
+		display: block;
+		width: 20%;
+		height: 60px;
+		font-size: 24px;
+		font-family: 'yg-jalnan';
+		text-align: center;
+		line-height: 60px;
+		color: white;
+		background-color: #aaaaaa;
+		border-radius: 5px;
+	}
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

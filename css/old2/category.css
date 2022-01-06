@@ -1,0 +1,192 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+header{
+/*	order: 0;*/
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+	#wrap {
+		flex-flow: row wrap;
+	}
+	#boxslider ul li{
+	}
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	/*-------------------카테고리----------------*/
+	#category{
+		width: 84.375%;
+		display: flex;
+		flex-flow: column;	
+	}
+	#categoryInfo{
+		width: 100%;
+		height: 60px;
+		padding-top: 30px;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	}
+	#webnav{
+		width: 20%;
+		font-size: 14px;
+		line-height: 14px;
+		color: black;
+		font-family: 'InfinitySans-RegularA1';
+	}
+	#categoryName{
+		width: 60%;
+		font-size: 25px;
+		line-height: 25px;
+		font-family: 'GmarketSansBold';
+		text-align: center;
+	}
+	#categoryOrder{
+		width: 20%;
+		text-align: right;
+	}
+	#categoryOrder select{
+		width: 100px;
+		height: 25px;
+	}
+	/*상품카드	*/
+	#productGroup{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	.productCard{ 
+		width: 248px;
+	/*	width: 22.962962%;*/
+		height: 285px;
+		margin:0px 20px 50px 20px;
+	}
+	.productCard img:hover{
+		transform:scale(1.1); 
+	}
+	.productCard img{ /*이미지 248px 고정*/
+		width: 248px;
+		border: 0;
+		transition:all 0.5s ease;
+	}
+	#imgmom{
+		overflow: hidden;
+	}
+	.productCard #imgmom{
+		height: 210px;
+	}
+	.productInfo{ /*상품정보 부모요소*/
+		height: 90px;
+		margin-top: -4px;
+		border-left: 1px solid #D7D7D7;
+		border-right: 1px solid #D7D7D7;
+		border-bottom: 1px solid #D7D7D7;
+		box-sizing: border-box;
+	}
+	.productInfo div a{ /*상품정보 제목*/
+		width: 67%;
+		height: 40px;
+		overflow: hidden;
+		padding-top: 8px;
+		padding-left: 10px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.productInfo div h2{ /*상품정보 조회수*/
+		margin-right: 3%;
+		padding-top: 8px;
+		width: 27%;
+		font-size: 12px;
+	}
+	.productInfo div h3{/*상품정보 가격*/
+		width: 67%;
+		text-align:right;
+		margin-right:3%;
+		font-size: 22px;
+	}
+	.productInfo div h4{/*상품정보 날짜*/
+		margin-right: 3%;
+		padding-top: 3px;
+		width: 27%;
+		font-size: 12px;
+	}
+	
+	
+	/*-------------------페이징 영역--------------*/
+	.paging { text-align: center; font-size: 0; margin-top: 20px;}
+	.paging li { display:inline-block; vertical-align: middle;}
+	.paging li a { font-size: 14px; display: block; width: 32px; height: 32px; line-height: 32px; color: #898786;}
+	.paging li.on a,
+	.paging li a:hover { color: #3A8B5A; text-decoration: underline;}
+	.paging li.first a,
+	.paging li.prev a,
+	.paging li.next a,
+	.paging li.last a { overflow: hidden; margin: 0 2px; width: 30px; height: 30px; border:1px solid #ebeae9; color: transparent; background: no-repeat center; }
+	.paging li.first a { background-image:url(../images/icon/ico_paging_first.png);}
+	.paging li.prev a { background-image:url(../images/icon/ico_paging_prev.png);}
+	.paging li.next a { background-image:url(../images/icon/ico_paging_next.png);}
+	.paging li.last a { background-image:url(../images/icon/ico_paging_last.png);}
+	.paging li.prev a { margin-right:23px;}
+	.paging li.next a { margin-left:23px;}
+}
+
+
+@media all and (min-width:1280px){
+	.content_item{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.productCard{ /*상품카드 */
+		width: 248px;
+	/*	width: 22.962962%;*/
+		height: 285px;
+		margin: 0 0 40px 0;
+	}
+	.content_item .productCard img{ /*이미지 248px 고정*/
+		width: 248px;
+		border: 0;
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

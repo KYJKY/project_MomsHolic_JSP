@@ -1,0 +1,160 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+#webnav {
+	width: 84.375%;
+	margin-top: 37px;
+	margin-bottom: 30px;
+	font-size: 14px;
+	font-family: 'Jal_Haru';
+	line-height: 14px;
+}
+
+section {
+	width: 84.375%;
+	height: auto;
+	font-family: 'InfinitySans-RegularA1';
+}
+
+/* -----------------------칼럼------------------------ */
+#column {
+	margin-top: 50px;
+	height: auto;
+	font-family: 'NanumBarunGothic';
+	border-bottom: 1px solid #797979;
+}
+
+.columnInfo {
+	width: 100%;
+	height: 90px;
+}
+
+.columnInfo .title {
+	width: 100%;
+	height: auto;
+	font-size: 26px;
+}
+
+.columnInfo .info {
+	width: 100%;
+	margin: 20px 0;
+}
+/* 본문 */
+.columnBody {
+	border-top: 1px solid #797979;
+	padding: 30px 0;
+}
+
+.columnBody p {
+	padding: 15px 0;
+	font-size: 20px;
+	line-height: 170%;
+}
+/* 이미지 */
+.columnImg {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+/* 버튼 */
+.likeButtonDiv {
+	width: 100%;
+	margin: 45px 0;
+}
+
+.likeButtonDiv .likeButton {
+	display: block;
+	width: 20%;
+	height: 60px;
+	font-size: 24px;
+	font-family: 'yg-jalnan';
+	text-align: center;
+	line-height: 60px;
+	color: white;
+	background-color: #aaaaaa;
+	border-radius: 5px;
+}
+
+/*------------------------댓글------------------------*/
+#comment {
+	width: 84.375%;
+	margin-top: 40px;
+}
+
+#comment h1 {
+	width: 100%;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+#commentInput {
+	width: 100%;
+	display: flex;
+}
+
+#commentInput textarea {
+	width: 80%;
+	height: 80px;
+	margin-right: 5%;
+}
+
+#commentInput #commentButton {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 24px;
+	color: #ffffff;
+	background-color: #797979;
+	border-radius: 5px;
+}
+
+#commentInput a {
+	width: 15%;
+	height: 80px;
+}
+
+#commentGroup {
+	margin-top: 20px;
+	padding: 50px 20px 0 20px;
+	border-top: 1px black solid;
+	border-bottom: 1px black solid;
+}
+
+.commentInfo {
+	display: flex;
+	border-top: 1px solid #7f7f7f;
+	padding-top: 20px;
+}
+
+.commentInfo h1 {
+	width: 30%;
+	margin-right: 40%;
+	color: #3A8B5A;
+}
+
+.commentInfo h2 {
+	width: 30%;
+	font-size: 12px;
+	color: #7f7f7f;
+	text-align: right;
+}
+
+#commentGroup p {
+	width: 100%;
+	color: #555555;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+}
+/*테블릿용 CSS*/
+@media all and (min-width:768px) {
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px) {
+}

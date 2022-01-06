@@ -1,0 +1,381 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#wrap {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+	#wrap {
+		flex-flow: row wrap;
+	}
+
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	#webnav{
+		width: 84.375%;
+		margin-top: 37px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-family: 'InfinitySans-RegularA1';
+		line-height: 14px;
+	}
+	/*-----------------------------------*/
+	section{
+		width: 84.375%;
+		font-family: 'InfinitySans-RegularA1';
+	}
+	/*------------------------line1------------------------*/
+	#line1{
+		
+		display: flex;
+		flex-flow: row wrap;
+		
+	}
+	#productImg{
+		width: 50%;
+		height: 460px;
+	}
+	#productImg img{
+		width: 460px;
+		height: 460px;
+	}
+	#productInfo{
+		width: 40%;
+		height: 462px;
+	}
+	#productInfo h1{
+		margin-top: 30px;
+		width: 100%;
+		height: 74px;
+		font-size: 26px;
+	}
+	#productInfo h2{
+		width: 100%;
+		height: 47px;
+		margin-top: 10px;
+		font-size: 34px;
+	}
+	#productInfo table{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.col1{
+		
+		height: 40px;
+		font-size: 16px;
+		color: #AAAAAA;
+	}
+	.col2{
+		font-size: 18px;
+		color: #333333;
+	}
+	
+	#buttons{
+		width: 100%;
+		display: flex;
+		margin-top: 30px;
+		font-family: 'yg-jalnan';
+		font-size: 20px;
+	}
+	#buttons a{
+		width: 40%;
+	}
+	#dibsButton{
+		width: 100%;
+		height: 60px;
+		background-color: #aaaaaa;
+		color: #ffffff;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 60px;
+	}
+	#talkButton{
+		width: 100%;
+		height: 60px;
+		background-color: #aaaaaa;
+		color: #ffffff;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 60px;
+	}
+	#dealButton{
+		width: 100%;
+		height: 60px;
+		background-color: #3A8B5A;
+		color: #ffffff;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 60px;
+	}
+	#modifyButton{
+		width: 100%;
+		height: 60px;
+		background-color: #7f7f7f;
+		color: #ffffff;
+		text-align: center;
+		line-height: 60px;
+	}
+	#deleteButton{
+		width: 100%;
+		height: 60px;
+		background-color: #7f7f7f;
+		color: #ffffff;
+		text-align: center;
+		line-height: 60px;
+	}
+	/*------------------------line2------------------------*/
+	#line2{
+		width: 84.375%;
+		margin-top: 45px;
+	}
+	#line2 h1{
+		font-size: 24px;
+		width: 100%;
+	}
+	#otherProduct{
+		margin-top: 20px;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	}
+	.otherCard{
+		width: 200px;
+		height: 229px;
+	}
+	.otherCard:last-child{
+		display: none;
+	}
+	.otherCard img{
+		width: 200px;
+		height: 169px;
+	}
+	.otherCard h2{
+		width: 100%;
+		height: 50px;
+		overflow: hidden;
+		font-size: 18px;
+		color: #555555;
+	}
+	/*------------------------line3------------------------*/
+	#line3{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		margin-top: 50px;
+	}
+	#detailInfo{
+		width: 50%;
+		margin-right: 10%;
+	}
+	#detailInfo h1{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#detailInfo p{
+		border-top:1px solid #797979 ;
+		border-bottom:1px solid #797979 ;
+		padding: 50px 0;
+		font-size: 16px;
+		color: #555555;
+	}
+	#sellerInfo{
+		width: 40%;
+		
+	}
+	#sellerInfo h1{
+		margin-bottom: 20px;
+	}
+	#sellerInfo h2{
+		color: #3A8B5A;
+		font-size: 20px;
+
+	}
+	#sellerInfo p{
+		margin-top: 10px;
+		font-size: 16px;
+		color: #555555;
+	}
+	/*------------------------댓글------------------------*/
+	#comment{
+		width:84.375%;
+		margin-top: 40px;
+	}
+	#comment h1{
+		width: 100%;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	#commentInput{
+		width: 100%;
+		display: flex;
+	}
+	#commentInput textarea{
+		width: 80%;
+		height: 80px;
+		margin-right: 5%;
+	} 
+	#commentInput #commentButton{
+		width: 100%;
+		height: 80px;
+		text-align: center;
+		line-height: 80px;
+		font-size: 24px;
+		color: #ffffff;
+		background-color: #797979;
+		border-radius: 5px;
+	}
+	#commentInput a{
+		width: 15%;
+		height: 80px;
+	}
+	#commentGroup{
+		margin-top: 20px;
+		padding: 50px 20px 0 20px;
+		border-top:1px black solid;
+		border-bottom:1px black solid;
+	}
+	.commentInfo{
+		display: flex;
+		border-top: 1px solid #7f7f7f;
+		padding-top: 20px;
+	}
+	.commentInfo h1{
+		width: 30%;
+		margin-right: 40%;
+		color: #3A8B5A;
+	}
+	.commentInfo h2{
+		width: 30%;
+		font-size: 12px;
+		color: #7f7f7f;
+		text-align: right;
+	}
+	#commentGroup p{
+		width: 100%;
+		color: #555555;
+		padding-bottom: 20px;
+		margin-bottom: 50px;
+	}
+	
+}
+
+
+
+/*------------------------line3------------------------*/
+   #line3{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      margin-top: 50px;
+   }
+   #detailInfo{
+      width: 50%;
+      margin-right: 10%;
+   }
+   #detailInfo h1{
+      width: 100%;
+      margin-bottom: 20px;
+   }
+   #detailInfo p{
+      border-top:1px solid #797979 ;
+      border-bottom:1px solid #797979 ;
+      padding: 50px 0;
+      font-size: 16px;
+      color: #555555;
+   }
+   #sellerInfo{
+      width: 40%;
+      
+   }
+   #sellerInfo h1{
+      margin-bottom: 20px;
+   }
+   #sellerInfo .sellerInfoText a{
+      color: #3A8B5A;
+      font-size: 20px;
+      
+   }
+   #sellerInfo p{
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555555;
+   }
+   .sellerInfo2{
+      width:100%;
+      display:flex;
+      flex-flow: row nowrap;
+   }
+   .sellerInfoText{
+      width:70%;
+   }
+   .sellerTalk{
+      width:30%;
+      height:60px;
+      line-height:60px;
+      text-align:center;
+      font-size:20px;
+      margin-top:30px;
+      background-color:#3A8B5A;
+      color:white;
+   }
+   .sellerTalk img{
+      width:20px;
+      height:18px;
+   }
+   /*------------------------댓글------------------------*/
+
+
+
+/*PC용 최대넓이 CSS*/
+@media all and (min-width:1280px){
+	.otherCard{
+		width: 200px;
+		height: 229px;
+	}
+	.otherCard img{
+		width: 200px;
+		height: 169px;
+		cursor: pointer;
+	}
+	.otherCard:last-child{
+		display: block;
+	}
+}
+
+/* 답글 */
+.tradecommentReply {
+	padding-left:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

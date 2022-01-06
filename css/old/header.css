@@ -1,0 +1,257 @@
+@charset "utf-8";
+/*모바일용 CSS*/
+#submenu li a img{
+	width: 26px;
+	height: 26px;
+	margin:12px 15px 0 15px;
+	
+}
+
+/*테블릿용 CSS*/
+@media all and (min-width:768px){
+	
+}
+/*PC용 CSS*/
+@media all and (min-width:1030px){
+	#wrap {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	#header{
+		width: 100%;
+/*
+	헤더 고정 코드인데 반응형에서 깨져서 나중에 
+		position:fixed;
+		z-index:10000;
+	
+*/
+	}
+	/* 4/13 로그인 후 추가  */
+	#loginBar{
+		width:100%;
+	}
+	#profileBar{
+		padding-top: 10px;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+	#profileDiv{
+		display: block;
+		float: left;
+	}
+	#profileDiv p{
+		float: left;
+		height: 50px;
+		margin-left: 10px;
+	}
+	#profileIcon{
+		margin-top: 3px;
+		float: left;
+		width: 28px;
+		height: 28px;
+		border: 1px black solid;
+	}
+	#profileIcon img{
+		width: 28px;
+		height: 28px;
+	}
+	#messengerIcon{
+		margin-left: 15%;
+		margin-right: 5%;
+	}
+	#messengerIcon, #bellIcon{
+		float: left;
+		width: 65px;
+	}
+	#messengerIcon img, #bellIcon img{
+		float: left;
+		padding-top:10px;
+		width: 20px;
+		height: 20px;
+	}
+	/*윗쪽 네비게이션*/
+	#topNav{
+		width: 84.375%;
+		height: 100px;
+	}
+	#topNav ul{ 
+		display: flex; /*가로로 정렬*/
+		justify-content: space-between; /*가로로 공백정렬*/
+	}
+	#topline{ /*위, 아래 네브 반투명 구분줄*/
+		border-bottom: solid 1px #D7D7D7;
+	}
+	#topNav ul li:nth-child(1){
+		width: 27.77777%;
+		height: 100px;
+		text-align: center;
+	}
+	#topNav #logo{
+		margin-top:18px;
+	}
+	#topNav ul li:nth-child(2) {
+		width: 46.296296%;
+		height: 100px;
+		text-align: center;
+	}
+	#topNav form{
+		display: block;
+	}
+	#topNav #searchText{
+		width: 80%;
+		height: 29px;
+		/* border: 3px #3A8B5A solid; */
+		border-top: 3px #3A8B5A solid;
+		border-bottom: 3px #3A8B5A solid;
+		border-left: 3px #3A8B5A solid;
+		border-right: 0;
+		margin-top:39px; 
+		float: left;
+	}
+	#topNav #searchButton{
+		margin-top:39px; 
+		float: left;
+	}
+	#topNav #searchButton img{
+		width: 35px;
+		height: 35px;
+	}
+	#topNav ul li:nth-child(3){
+		width: 25.925925%;
+		height: 90px;
+		padding-top: 10px;
+		text-align: center;
+	}
+	#topNav #log_register_customer{
+		font-size: 0.875em;
+		font-family: 'InfinitySans-RegularA1';
+	}
+	/*아래 네비게이션*/
+	#bottomNav{
+		width: 84.375%; /*1080px*/
+		height: 50px;
+	}
+	#bottomNav ul{
+		display: flex; /*가로로 정렬*/
+		justify-content: space-between; /*가로로 공백정렬*/
+	}
+	#bottomNav ul li:nth-child(1) {
+		width: 20%; /*216px*/
+		height: 49px;
+		text-align: center;
+		border-right: 1px #D7D7D7 solid;
+		border-left: 1px #D7D7D7 solid;
+	}
+	#bottomNav ul li:nth-child(1) a{
+		display: flex; /*가로로 정렬*/
+		justify-content: center; /*공백좌우 가운데정렬*/
+	}
+	/*category 1,2,3 = MOM's마켓 사진-글-사진 배열*/
+	#category1{
+		width: 20px;
+		height: 17px;
+	/*	width: 20px;*/
+		padding-top: 16px;
+		padding-bottom: 16px;
+		padding-left: 4.629629%;
+	}
+	#category2{
+		width: 70.37037%;
+	/*	width: 152px*/
+		height: 49px;
+		font-size: 1.125em;
+		font-family: 'yg-jalnan';
+		text-align: center;
+		line-height: 47px;
+	}
+	#category3{
+	/*	width: 13.888888%;*/
+		text-align: center;
+		padding-top: 16px;
+		padding-right: 1.851851%;
+		padding-bottom: 16px;
+	}
+
+	/*
+	#bottomNav ul li:nth-child(1) img{
+		width: 100%;
+		max-width: 100%;
+	}
+	*/
+	#mainmenu #mainlist2, #mainlist3, #mainlist4, #mainlist5 {
+		width: 13.888888%;
+		height: 49px;
+		margin-left: 2.222222%;
+		font-size: 1em;
+		font-family: 'Jal_Haru';
+		font-weight: bold;
+		line-height: 49px;
+		text-align: center;
+
+	}
+	#mainmenu #mainlist6 {
+		width: 20%;
+		height: 49px;
+		margin-left: 2.222222%;
+		background-image:url("images/sell.png");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		text-align: center;
+		line-height: 46px;
+	}
+	#mainmenu #mainlist6 a{
+		width: 100%;
+		font-size: 1em;
+		font-family: 'Jal_Haru';
+		font-weight: bold;
+		color: white;
+	}
+	/*----------------카테고리 드롭다운 메뉴------------	*/
+	#submenu{
+		display: flex;
+		flex-flow: column;
+	}
+	#submenu li{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		height: 0;
+		opacity: 0;
+		line-height: 0;
+		transition: 0.2s;
+		font-size: 14px;
+		display: none;
+	}
+	#mainmenu li:hover #submenu li {
+		z-index: 30;
+		margin-top: -2px;
+		margin-left: -1px;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		opacity: 1;	
+		font-family:'InfinitySans-RegularA1';
+		font-size: 14px;
+		font-weight: normal;
+		text-align: left;
+		background-image: none;
+		color: black;
+		background-color: white;
+		border: 1px solid #D7D7D7;
+		display: block;
+	}
+	/* #submenu a:link, #submenu a:visited {
+		color: black;
+		text-decoration: none;	
+	} */
+	#submenu li a img{
+		width: 26px;
+		height: 26px;
+		margin:12px 15px 0 15px;
+	}
+}

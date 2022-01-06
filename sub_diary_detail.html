@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>MOM's Holic</title>
+		<link href="css/sub_diary_detail.css" rel="stylesheet" type="text/css">
+		<link href="css/base.css" rel="stylesheet" type="text/css">
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<link href="css/footer.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script language="javascript" src="js/login.js" charset="UTF-8"></script>
+	</head>
+
+	<body onLoad="login_focus()">
+		<div id="wrap">
+			<!--헤더-->
+			<header id="header">
+				<!--윗 네비게이션-->
+				<div id="topNav">
+					<ul>
+						<li id="logo"><a href="index.html"><img src="images/Logo.png"></a></li>
+						<li>
+							<form>
+								<input type="text" id="searchText" placeholder="검색어를 입력해 주세요.">
+								<div id="searchButton"><a href="#"><img src="images/button/search.png"></a></div>
+							</form>
+						</li>
+						<li id="log_register_customer">
+							<a href="login.html">로그인</a>&nbsp;&nbsp;|&nbsp;
+							<a href="register.html">회원가입</a>&nbsp;&nbsp;|&nbsp;
+							<a href="#">고객센터</a>
+							<div id="profileBar">
+								<p>멀티미디어님</p>
+								<div id="messengerIcon"><a href="#"><img src="images/icon/messenger.png"><p>맘스톡</p></a></div>
+								<div id="bellIcon"><a href="#"><img src="images/icon/bell.png"><p>알림</p></a></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+				
+				<!--아래 네비게이션-->
+				<div id="bottomNav">
+					<ul id="mainmenu">
+						<li id="mainlist1"><a href="#">
+								<img src="images/categorySymbol.PNG" id="category1">
+								<p id="category2">MOM's 마켓</p>
+								<img src="images/categorySymbol2.png" id="category3">
+							</a>
+							<ul id="submenu">
+								<li><a href="#"><img src="images/icon/shopping-cart.png"><p>전체</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-clothing.png"><p>의류</p></a></li>
+								<li><a href="#"><img src="images/icon/baby-shoes.png"><p>신발</p></a></li>
+								<li><a href="#"><img src="images/icon/book.png"><p>도서</p></a></li>
+								<li><a href="#"><img src="images/icon/rubber-duck.png"><p>장난감/완구</p></a></li>
+								<li><a href="#"><img src="images/icon/menu.png"><p>기타</p></a></li>
+							</ul>
+						</li>		
+						<li id="mainlist2"><a href="#">MOM's 나눔터</a></li>
+						<li id="mainlist3"><a href="#">MOM's 칼럼</a></li>
+						<li id="mainlist4"><a href="#">MOM's 레시피</a></li>
+						<li id="mainlist5"><a href="#">MOM's 일기</a></li>
+						<li id="mainlist6"><a href="#">
+								 물건 판매하기
+						</a></li>
+					</ul>
+				</div>
+				<div id="topline"></div>
+			</header>
+			<!-- 웹경로 -->
+			<div id="webnav">
+				<p>메인 > MOM's일기 > 일기읽기</p>
+			</div>
+
+			<!-- ----------------칼럼-------------- -->
+			<section id="column">
+				<!--칼럼제목/정보  -->
+				<div class="columnInfo">
+					<h1 class="title">오늘 아이가 아파서 응급실 다녀왔네요 ㅠ</h1>
+					<p class="info">영희맘  |  2020-03-10 08:52  |  댓글 1  |  조회수 12</p>
+				</div>
+				<div class="columnBody">
+					<p>
+						아이가 아파서 유난히 길었던 하루 였습니다.
+						다행이 열은 좀 내리고 잠들었는데 내일은 부디 아무탈 없이 건강해 지길 바라며 ㅠ.ㅠ
+					</p>
+				</div>
+				<div class="columnImg">
+					<img src="images/column/colEx/ex1.jpg">
+				</div>
+
+			</section>
+
+			<!-- --------------댓글영역------------ -->
+			<section id="comment">
+				<h1>댓글 n</h1> <!--n=댓글 수-->
+				<div id="commentInput">
+					<textarea placeholder="댓글을 입력해주세요."></textarea>
+					<a href="#"><div id="commentButton">입력하기</div></a>
+				</div>
+				
+				<div id="commentGroup">
+					<!--댓글1  -->
+					<div class="commentInfo">
+						<h1>닉네임</h1>
+						<h2>2021-03-10 09:12</h2>
+					</div>
+					<p>내용 123456790 가나다라마바사아다가타카타하하가나바갖가날마</p>
+					
+					<!--댓글1  -->
+					<div class="commentInfo">
+						<h1>닉네임</h1>
+						<h2>2021-03-10 09:12</h2>
+					</div>
+					<p>내용 123456790 가나다라마바사아다가타카타하하가나바갖가날마</p>
+					
+					<!--댓글1  -->
+					<div class="commentInfo">
+						<h1>닉네임</h1>
+						<h2>2021-03-10 09:12</h2>
+					</div>
+					<p>내용 123456790 가나다라마바사아다가타카타하하가나바갖가날마</p>
+				</div>
+			</section>
+
+			<!--푸터영역-->
+			<footer>
+				<div id="footerimg">
+					<img src="images/logo.png" id="footerLogo">
+					<img src="images/sns.png" id="footerSNS">
+				</div>
+				<div id="footerInfo">
+					<p>
+						(주)맘스홀릭 대표이사: 이마마 | 주소: 서울특별시 강남구 강남	대로 234길 맘스타워 8층<br>
+						사업자등록번호 : 100-01-54123     통신판매업신고번호 : 제2021-서울강남-0520호 사업자정보확인<br>
+						맘스홀릭 고객센터 문의 : 02-550-9988(평일 10시~16시) | 팩스 : 02-560-5050<br>
+						호스팅서비스 제공자: MOMS Web Services (MWS)<br><br><br>
+					</p>
+					<p>
+						(주)맘스홀릭은 통신판매중개자로서 거래당사자가 아니며,  맘스홀릭 판매자가 등록한 상품정보 및 거래에 대해 (주)맘스홀릭은 책임이 없습니다.<br>
+						(주)맘스홀릭. All rights reserved.
+					</p>
+				</div>
+			</footer>
+		</div>
+			
+			
+			
+			
+			
+	</body>
+</html>
